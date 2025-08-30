@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yu-Gi-Oh Jo-Ken-po Edition</title>
+
+  <!-- Reset css -->
+  <link rel="stylesheet" href="/src/styles/reset.css">
+
+  <!-- Frameworks -->
+  <link rel="stylesheet" href="/src/styles/buttons.css">
+
+  <!-- Containers -->
+  <link rel="stylesheet" href="/src/styles/containers_and_frames.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/src/assets/icons/millenium2.png"/>
+
+  <!-- Principal -->
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+
+    
+
+  <!-- Background com vídeo -->
+  <div class="bg-video">
+    <video autoplay muted loop>
+      <source src="/src/assets/video/yugi.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="container">
+    <!-- Lado esquerdo -->
+    <div class="container__left framed-golden-2">
+      <!-- Score -->
+      <div class="score_box frame">
+        <span id="score_points">Win : 0 | Lose : 0</span>
+      </div>
+
+      <!-- Avatar da carta selecionada -->
+      <div class="menu_avatar">
+        <img id="card-image">
+      </div>
+
+      <!-- Detalhes da carta -->
+      <div class="card_details frame">
+        <p id="card-name">Select a Card</p>
+        <p id="card-type"></p>
+      </div>
+    </div>
+
+    <!-- Lado direito -->
+    <div class="container__right">
+      <div class="cardbox__container">
+
+        <!-- Área da mão do computador -->
+        <div class="card-box framed" id="computer_card"></div>
+
+        <!-- Campo de duelo -->
+        <div class="card-versus__container">
+          <div class="versus-top">
+            <div class="card-infield">
+              <img id="player-field-card" height="180px" width="125px">
+            </div>
+            <img height="100px" src="src/assets/icons/millenium2.png">
+            <div class="card-infield">
+              <img id="computer-field-card" height="180px" width="125px">
+            </div>
+          </div>
+        </div>
+
+        <!-- Botão centralizado -->
+        <div class="versus-result">
+          <button id="next" class="rpgui-button" style="display:none;">Próxima rodada</button>
+        </div>
+
+        <!-- Área da mão do jogador -->
+        <div class="card-box framed" id="player_card"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Música de fundo -->
+    <audio id="bgm" >
+        <source  src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
+
+  <!-- Scripts -->
+  <script src="/src/scripts/engine.js" defer></script>
+</body>
+</html>
